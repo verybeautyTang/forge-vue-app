@@ -21,7 +21,7 @@
       "@/*": [
         "src/*"
       ],
-      "store": ["/src/store"]
+      "store": ["/src/store/*"]
     },
     "lib": [
       "esnext",
