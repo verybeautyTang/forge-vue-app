@@ -6,7 +6,7 @@
         <el-aside width="180px"> <base-aside /></el-aside>
         <el-container>
           <el-main><router-view /></el-main>
-          <el-footer>Footer</el-footer>
+          <el-footer><footer-list /></el-footer>
         </el-container>
       </el-container>
     </el-container>

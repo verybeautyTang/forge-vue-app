@@ -122,7 +122,8 @@ const backMangement: Array<RouteRecordRaw> = [
           title: "人员管理",
           showType: [],
         },
-        component: () => import("../views/authorityManagement/index.vue"),
+        component: () =>
+          import("../views/authorityManagement/AuthorityManagement.vue"),
       },
       {
         path: "/translator-management",
