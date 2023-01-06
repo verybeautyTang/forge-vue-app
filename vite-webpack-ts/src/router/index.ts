@@ -9,6 +9,7 @@ const orderManagement: Array<RouteRecordRaw> = [
     meta: {
       title: "订单管理",
       showType: [],
+      icon: "home",
     },
     redirect: "/order-management/issue-order",
     children: [
@@ -59,6 +60,7 @@ const quantityMangement: Array<RouteRecordRaw> = [
     meta: {
       title: "需求管理",
       showType: [],
+      icon: "home",
     },
     redirect: "/quantity-mangement/quantity-list",
     children: [
@@ -109,6 +111,7 @@ const backMangement: Array<RouteRecordRaw> = [
     meta: {
       title: "需求管理",
       showType: [],
+      icon: "home",
     },
     redirect: "/back-mangement/authority-management",
     children: [
@@ -142,7 +145,11 @@ const backMangement: Array<RouteRecordRaw> = [
     ],
   },
 ];
-const routes: Array<RouteRecordRaw> = [
+
+// 项目管理
+
+// 全部的路由
+export const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "home",
@@ -150,6 +157,7 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: "主页",
       showType: [],
+      icon: "home",
     },
   },
   ...orderManagement,

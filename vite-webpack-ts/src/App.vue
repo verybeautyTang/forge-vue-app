@@ -1,9 +1,9 @@
 <template>
   <el-config-provider namespace="ep" locale="locale">
-    <el-container>
-      <el-header class="header"><BaseHeader /></el-header>
+    <el-container class="container">
+      <el-header class="header"><base-header /></el-header>
       <el-container>
-        <el-aside width="180px"> <BaseSide /></el-aside>
+        <el-aside width="180px"> <base-aside /></el-aside>
         <el-container>
           <el-main><router-view /></el-main>
           <el-footer>Footer</el-footer>
@@ -22,6 +22,10 @@
   text-align: center;
   color: var(--ep-text-color-primary);
   color: #2c3e50;
+  height: 100%;
+}
+.container {
+  height: 100%;
 }
 .header {
   padding: 0;
