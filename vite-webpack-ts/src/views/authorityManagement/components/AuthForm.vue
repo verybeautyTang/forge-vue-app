@@ -38,6 +38,7 @@ const formInline = reactive({
 
 const onSubmit = () => {
   console.log("submit!");
+  // @emit
 };
 </script>
 <style lang="scss">

@@ -1,10 +1,10 @@
 <template>
   <el-config-provider namespace="ep" locale="locale">
     <el-container class="container">
-      <el-header class="header"><base-header /></el-header>
       <el-container>
         <el-aside width="180px"> <base-aside /></el-aside>
         <el-container>
+          <el-header class="header"><base-header /></el-header>
           <el-main><router-view /></el-main>
           <el-footer><footer-list /></el-footer>
         </el-container>
