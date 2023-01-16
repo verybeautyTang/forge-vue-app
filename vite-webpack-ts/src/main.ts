@@ -18,8 +18,9 @@ const locale = computed(() => (language.value === "zh-cn" ? zhCn : en));
 const app = createApp(App);
 
 app.use(store);
-app.use(ElementPlus, { locale });
-app.use(router);
-app.mount("#app");
 
-// createApp(App).use(router).mount("#app");
+app.use(ElementPlus, { locale });
+
+app.use(router);
+
+app.mount("#app");

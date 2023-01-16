@@ -154,11 +154,20 @@ export const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "home",
-    component: HomeView,
+    component: () => import("../views/dashboard/index.vue"),
     meta: {
       title: "主页",
       showType: [],
       icon: "home",
+    },
+  },
+  {
+    path: "/no-permission",
+    name: "home",
+    component: () => import("../views/noPermission/index.vue"),
+    meta: {
+      title: "",
+      showType: [],
     },
   },
   ...orderManagement,

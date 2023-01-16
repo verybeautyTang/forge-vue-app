@@ -8,15 +8,17 @@ import { HttpResponse } from "@/types/request";
 import { ElMessage } from "element-plus";
 import { userStore } from "@/store/slices/user";
 // import globalConfig from "./config";
+console.log("我执行了哦");
 
-const service: AxiosInstance = axios.create({
-  baseURL: process.env.BASE_API + "/admin", // api 的 base_url
+console.log(process.env.BASE_API);
+const request: AxiosInstance = axios.create({
+  baseURL: process.env.BASE_API + "/admin/dev", // api 的 base_url
   timeout: 15000, // request timeout
 });
 
 // 请求拦截
 // request interceptor
-service.interceptors.request.use(
+request.interceptors.request.use(
   (config: AxiosRequestConfig) => {
     if (config.url && config.url.indexOf("/tools/resetEsIndex") > -1) {
       config.timeout = 300 * 1000;
@@ -29,7 +31,7 @@ service.interceptors.request.use(
 );
 
 // 响应拦截
-service.interceptors.response.use(
+request.interceptors.response.use(
   // response => response,
   /**
    * 下面的注释为通过在response里，自定义code来标示请求状态
@@ -39,6 +41,7 @@ service.interceptors.response.use(
    */
   (response: AxiosResponse<HttpResponse<any>>) => {
     const { data } = response;
+    console.log(data);
     const { code, msg = "服务器异常", data: responseData } = data;
     if (code !== 0) {
       if (code === -32768) {
@@ -46,7 +49,11 @@ service.interceptors.response.use(
         setTimeout(() => {
           const store = userStore();
           store.feLogOut();
-          window.location.hash = "#/login";
+          // 跳转到飞书登录
+          // window.location.href =
+          //   process.env.BASE_API +
+          //   "/admin/agent/login?callback=" +
+          //   encodeURIComponent(window.btoa(location.href));
         }, 1000);
         return;
       }
@@ -64,3 +71,5 @@ service.interceptors.response.use(
     return Promise.reject(error);
   }
 );
+
+export default request;

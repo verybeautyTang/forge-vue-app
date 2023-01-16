@@ -16,6 +16,10 @@ const PATHS = {
   // Static files that get copied to build folder
   public: resolve(__dirname, "./public"),
 };
+
+const API_PREFIX = "/admin";
+const API_HOST = "https://fansclub.happyelements.com/v3_server_test";
+
 module.exports = defineConfig({
   transpileDependencies: true,
   configureWebpack: {
@@ -37,5 +41,13 @@ module.exports = defineConfig({
         resolvers: [ElementPlusResolver()],
       }),
     ],
+    devServer: {
+      proxy: {
+        [`${API_PREFIX}`]: {
+          target: API_HOST,
+          pathRewrite: { [`^${API_PREFIX}`]: "" },
+        },
+      },
+    },
   },
 });

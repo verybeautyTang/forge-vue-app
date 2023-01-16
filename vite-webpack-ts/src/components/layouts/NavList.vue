@@ -3,7 +3,7 @@
     <label v-for="navMenu in props.navMenus" :key="navMenu.path">
       <!--只有一级菜单-->
       <el-menu-item
-        v-if="!navMenu.children"
+        v-if="!navMenu.children && navMenu?.meta.title"
         :index="navMenu.path"
         :route="navMenu.path"
       >

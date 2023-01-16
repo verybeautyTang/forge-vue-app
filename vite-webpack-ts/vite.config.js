@@ -8,7 +8,6 @@ import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 
 const pathSrc = path.resolve(__dirname, "src");
-
 export default defineConfig({
   resolve: {
     alias: {
@@ -45,4 +44,19 @@ export default defineConfig({
       dts: "./src/types/auto-imports.d.ts",
     }),
   ],
+  define: {
+    "process.env": {
+      BASE_API: "https://fansclub.happyelements.com/v3_server_test",
+    },
+  },
+  server: {
+    port: 5005,
+    proxy: {
+      "/dev": {
+        target: "https://fansclub.happyelements.com/v3_server_test",
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/dev/, ""),
+      },
+    },
+  },
 });
