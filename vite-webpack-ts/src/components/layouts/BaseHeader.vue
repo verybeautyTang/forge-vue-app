@@ -2,6 +2,10 @@
 import { ref } from "vue";
 import { toggleDark } from "@/composables";
 import { ArrowDown } from "@element-plus/icons-vue";
+
+import { userStore } from "@/store/slices/user";
+
+const store = userStore();
 const language = ref("zh-cn");
 const value = ref("");
 const options = [
@@ -37,7 +41,7 @@ const options = [
     />
     <el-dropdown>
       <span class="el-dropdown-link">
-        用户名
+        {{ store.fullName }}
         <el-icon class="el-icon--right">
           <arrow-down />
         </el-icon>
