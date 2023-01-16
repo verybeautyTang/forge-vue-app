@@ -16,6 +16,7 @@
     "ElCol": true,
     "ElConfigProvider": true,
     "ElContainer": true,
+    "ElDatePicker": true,
     "ElDrawer": true,
     "ElDropdown": true,
     "ElDropdownItem": true,
