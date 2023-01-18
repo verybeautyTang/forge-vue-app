@@ -6,13 +6,10 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 
-import chooseTime, {
-  chooseTimeProps,
-  chooseTimeEmits,
-} from "@/types/choose-time";
+import { LanguageEmits, LanguageProps } from "@/types/choose-language";
 
-const props = withDefaults(defineProps<chooseTimeProps>(), {
-  placeholder: "请选择项目",
+const props = withDefaults(defineProps<LanguageProps>(), {
+  placeholder: "请选择语言",
   size: "default",
   // list: chooseTime || undefined,
   clearable: false,
@@ -20,7 +17,7 @@ const props = withDefaults(defineProps<chooseTimeProps>(), {
   width: "100%",
 });
 
-const emits = defineEmits<chooseTimeEmits>();
+const emits = defineEmits<LanguageEmits>();
 
 const selectChanged = (e: string) => {
   console.log("change事件");
@@ -29,7 +26,6 @@ const selectChanged = (e: string) => {
 
 const selectBlur = (e: FocusEvent) => {
   console.log("blur事件");
-  emits?.blur?.(e);
 };
 const select = ref(props.selected);
 </script>
