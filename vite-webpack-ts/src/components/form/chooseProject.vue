@@ -2,33 +2,24 @@
 <!-- props -->
 <!-- width、data、selected、placeholder、multiple、clearable、change事件、blur事件、style、class属性-->
 <script lang="ts" setup>
+import { peojectListEmits, peojectListProps } from "@/types/choose-project";
 import { ref } from "vue";
 
-import chooseTime, {
-  chooseTimeProps,
-  chooseTimeEmits,
-} from "@/types/choose-time";
-
-const props = withDefaults(defineProps<chooseTimeProps>(), {
+const props = withDefaults(defineProps<peojectListProps>(), {
   placeholder: "请选择项目",
   size: "default",
-  // list: chooseTime || undefined,
   clearable: false,
   multiple: false,
   width: "100%",
 });
 
-const emits = defineEmits<chooseTimeEmits>();
+const emits = defineEmits<peojectListEmits>();
 
 const selectChanged = (e: string) => {
   console.log("change事件");
   emits?.change?.(e);
 };
 
-const selectBlur = (e: FocusEvent) => {
-  console.log("blur事件");
-  emits?.blur?.(e);
-};
 const select = ref(props.selected);
 </script>
 <template>
@@ -39,10 +30,9 @@ const select = ref(props.selected);
     size="large"
     :style="props.style"
     @change="selectChanged"
-    @blur="selectBlur"
   >
     <el-option
-      v-for="item in props.list"
+      v-for="item in props.projects"
       :key="item.value"
       :label="item.label"
       :value="item.value"

@@ -1,31 +1,12 @@
-export enum chooseTimeListType {
-  thisWeek = "thisWeek",
-  thisMonth = "thisMonth",
-  thisThreeMonth = "thisThreeMonth",
-  thisSixMonth = "thisSixMonth",
-  thisYear = "thisYear",
-  otherTime = "otherTime",
-}
-
-// 默认时间选择类型
-export enum chooseTimeType {
-  thisWeek = "最近一周",
-  thisMonth = "最近一个月",
-  thisThreeMonth = "最近三个月",
-  thisSixMonth = "最近半年",
-  thisYear = "最近一年",
-  otherTime = "其他时间",
-}
-
 // 数据类型
-export type chooseTimeItemType = {
-  value: chooseTimeListType;
-  label: chooseTimeType;
+export type ProjectItemType = {
+  value: string;
+  label: string;
 };
 
-export type chooseTimeProps = {
+export type peojectListProps = {
   /** 传入的数据 */
-  list?: chooseTimeItemType[];
+  projects: ProjectItemType[];
 
   /** 选择框的大小 */
   width?: number | string;
@@ -52,22 +33,7 @@ export type chooseTimeProps = {
   class?: string;
 };
 
-export type chooseTimeEmits = {
+export type peojectListEmits = {
   /**  选中值时发生变化  */
   change?: (selected: string) => void;
-
-  /**  失焦发生变化  */
-  blur?: (event: FocusEvent) => void;
 };
-
-// 默认数据
-const chooseTime: chooseTimeItemType[] | never = [];
-
-for (const key in chooseTimeListType) {
-  chooseTime.push({
-    value: chooseTimeListType[key],
-    label: chooseTimeType[chooseTimeListType[key]],
-  });
-}
-
-export default chooseTime;

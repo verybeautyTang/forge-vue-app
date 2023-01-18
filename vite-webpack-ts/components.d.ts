@@ -13,6 +13,7 @@ declare module '@vue/runtime-core' {
     ChooseLanguage: typeof import('./src/components/form/chooseLanguage.vue')['default']
     ChooseProject: typeof import('./src/components/form/chooseProject.vue')['default']
     ChooseTime: typeof import('./src/components/form/chooseTime.vue')['default']
+    ChooseType: typeof import('./src/components/form/chooseType.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElBreadcrumb: typeof import('element-plus/es')['ElBreadcrumb']
