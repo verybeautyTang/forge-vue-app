@@ -51,11 +51,11 @@
         <span>{{ formLabelAlign.Pendingtype }}</span>
       </el-form-item>
       <el-form-item label="截止日期">
-        <el-date-picker
+        <!-- <el-date-picker
           v-model="formLabelAlign.expirationDate"
           type="date"
           placeholder="Pick a day"
-        />
+        /> -->
       </el-form-item>
       <el-form-item label="备注信息或参考附件">
         <span>{{ formLabelAlign.Pendingtype }}</span>

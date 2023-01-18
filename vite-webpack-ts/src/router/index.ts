@@ -151,9 +151,18 @@ const backMangement: Array<RouteRecordRaw> = [
 
 // 全部的路由
 export const routes: Array<RouteRecordRaw> = [
+  // {
+  //   path: "/",
+  //   name: "home",
+  //   component: () => import("../components/layouts/LayoutBlank.vue"),
+  //   meta: {
+  //     showType: [],
+  //     icon: "home",
+  //   },
+  //   children: [
   {
     path: "/",
-    name: "home",
+    name: "dashboard",
     component: () => import("../views/dashboard/index.vue"),
     meta: {
       title: "主页",
@@ -163,7 +172,7 @@ export const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/no-permission",
-    name: "home",
+    name: "permission",
     component: () => import("../views/noPermission/index.vue"),
     meta: {
       title: "",
@@ -174,6 +183,8 @@ export const routes: Array<RouteRecordRaw> = [
   ...quantityMangement,
   ...backMangement,
 ];
+//   },
+// ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
