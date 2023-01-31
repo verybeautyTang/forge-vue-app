@@ -9,7 +9,7 @@
             <breadcrumb></breadcrumb>
             <router-view />
           </el-main>
-          <el-footer><footer-list /></el-footer>
+          <!-- <el-footer><footer-list /></el-footer> -->
         </el-container>
       </el-container>
     </el-container>

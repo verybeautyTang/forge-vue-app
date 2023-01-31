@@ -5,9 +5,9 @@ export enum PendingType {
 }
 
 export enum PendingUploadName {
-  Special = "特殊需求",
+  Special = "上传需求文件",
   Project = "上传需求文本包（.csv文件）",
-  Text = "上传需求文本",
+  Text = "填写需求详情(Details)",
 }
 
 /**上传需求文本类型 */
@@ -51,8 +51,11 @@ export type BasicPendingForm = {
   uploadName: PendingUploadName;
 
   /** 需求类型 */
-  Pendingtype: PendingType;
+  Pendingtype: PendingType | string;
 
   /** 上传需求文件 */
   uploadFlie?: string | TextContent[];
+
+  /** 文本需求类型 */
+  textType?: string;
 };

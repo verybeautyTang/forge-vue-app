@@ -3,7 +3,7 @@
     <label v-for="navMenu in props.navMenus" :key="navMenu.path">
       <!--只有一级菜单-->
       <el-menu-item
-        v-if="!navMenu.children && navMenu?.meta.title"
+        v-if="!navMenu.children && navMenu?.meta.title && !navMenu?.meta.hidden"
         :index="navMenu.path"
         :route="navMenu.path"
       >
@@ -40,6 +40,7 @@ interface Params {
     title: string;
     showType: Array<string>;
     icon: string;
+    hidden?: boolean;
   };
   redirect?: string;
   children?: Params[];
@@ -50,4 +51,5 @@ interface Menu {
 }
 
 const props = defineProps<Menu>();
+console.log(props.navMenus);
 </script>

@@ -1,13 +1,15 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+export const Layout = () => import("@/components/layouts/index.vue");
 
-// 订单管理
+// 订单中心
 const orderManagement: Array<RouteRecordRaw> = [
   {
     path: "/order-management",
     name: "orderManagement",
+    component: Layout,
     meta: {
-      title: "订单管理",
+      title: "订单中心",
       showType: [],
       icon: "home",
     },
@@ -17,16 +19,26 @@ const orderManagement: Array<RouteRecordRaw> = [
         path: "/issue-order",
         name: "issueOrder",
         meta: {
-          title: "发起订单",
+          title: "发起订单申请",
           showType: [],
         },
         component: () => import("../views/issueOrder/index.vue"),
       },
       {
+        path: "/create-order/:name/:edit",
+        name: "createOrder",
+        meta: {
+          title: "发起订单申请",
+          showType: [],
+          hidden: true,
+        },
+        component: () => import("../views/createOrder/index.vue"),
+      },
+      {
         path: "/order-list",
         name: "orderList",
         meta: {
-          title: "订单列表",
+          title: "我的全部订单",
           showType: [],
         },
         component: () => import("../views/orderList/index.vue"),
@@ -44,7 +56,7 @@ const orderManagement: Array<RouteRecordRaw> = [
         path: "/draft-order",
         name: "draftOrder",
         meta: {
-          title: "草稿箱",
+          title: "订单管理",
           showType: [],
         },
         component: () => import("../views/draftsOrder/index.vue"),
@@ -57,6 +69,7 @@ const quantityMangement: Array<RouteRecordRaw> = [
   {
     path: "/quantity-mangement",
     name: "quantityMangement",
+    component: Layout,
     meta: {
       title: "需求管理",
       showType: [],
@@ -108,6 +121,7 @@ const backMangement: Array<RouteRecordRaw> = [
   {
     path: "/back-mangement",
     name: "backMangement",
+    component: Layout,
     meta: {
       title: "需求管理",
       showType: [],
@@ -149,7 +163,7 @@ const backMangement: Array<RouteRecordRaw> = [
 
 // 项目管理
 
-// 全部的路由
+// 所有的静态路由
 export const routes: Array<RouteRecordRaw> = [
   // {
   //   path: "/",
@@ -163,7 +177,8 @@ export const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "dashboard",
-    component: () => import("../views/dashboard/index.vue"),
+    component: Layout,
+    // component: () => import("../views/dashboard/index.vue"),
     meta: {
       title: "主页",
       showType: [],

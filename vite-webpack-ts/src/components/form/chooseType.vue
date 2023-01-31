@@ -8,7 +8,6 @@ import { ref } from "vue";
 const props = withDefaults(defineProps<chooseTypeProps>(), {
   placeholder: "选择需求类型",
   size: "default",
-  // list: chooseTime || undefined,
   clearable: false,
   multiple: false,
   width: "100%",

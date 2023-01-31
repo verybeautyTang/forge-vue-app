@@ -1,40 +1,67 @@
 <script lang="ts" setup>
-const data = [
+import { PendingType } from "@/types/pending-order";
+import { RoleList } from "@/types/role";
+//引入路由函数
+import { useRouter } from "vue-router";
+const router = useRouter();
+
+type IProps = {
+  /** 发起名称 */
+  name: PendingType;
+  /** 发起描述 */
+  desc: string;
+  /** 对应颜色 */
+  color: string;
+  /** 无权限角色 */
+  Disabledrole?: Array<RoleList>;
+};
+const data: IProps[] = [
   {
-    name: "发起项目需求",
+    name: PendingType.Project,
     desc: "含键值的游戏内文本翻译",
-    role: [],
+    color: "#169BD5",
+    Disabledrole: [RoleList.GeneralUser, RoleList.ProjectTranslator],
   },
   {
-    name: "发起文本需求",
+    name: PendingType.Text,
     desc: "运营公告、社媒文案等纯文本翻译",
-    role: [],
+    color: "#70B603",
   },
   {
-    name: "发起项目需求",
+    name: PendingType.Special,
     desc: "含图片的PR稿、PPT、Excel等文件翻译",
-    role: [],
+    color: "#C280FF",
   },
 ];
+
+const issueHandle = (name: PendingType) => {
+  router.push({
+    path: `/create-order/${encodeURIComponent(name)}/1`,
+    // query: {
+    //   name: encodeURIComponent(name),
+    //   edit: 1,
+    // },
+  });
+};
 </script>
 <template>
   <div class="issue-container">
-    <h2 class="issue-project">当前项目：project</h2>
-    <el-row :gutter="12" class="issue-order">
-      <el-col :span="8" v-for="item in data" :key="item.name">
-        <el-card shadow="hover">
-          <template #header>
-            <div class="card-header">
-              <span>{{ item.name }}</span>
-            </div>
-          </template>
-          <div>{{ item.desc }}</div>
-        </el-card>
+    <el-row justify="space-evenly" class="issue-order">
+      <el-col
+        :span="3"
+        v-for="item in data"
+        :key="item.name"
+        @click="issueHandle(item.name)"
+      >
+        <div class="issue-button" :style="{ backgroundColor: item.color }">
+          {{ item.name }}
+        </div>
+        <span class="issue-desc">{{ item.desc }}</span>
       </el-col>
     </el-row>
   </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 .issue-container {
   .issue-project {
     text-align: left;
@@ -42,6 +69,19 @@ const data = [
   .issue-order {
     margin: auto;
     padding-top: 15%;
+    .issue-button {
+      padding: 5%;
+      margin-bottom: 10%;
+      font-weight: 600;
+      cursor: pointer;
+      color: #ffffff;
+      border-radius: 5px;
+    }
+    .issue-desc {
+      font-size: 14px;
+      color: #000000;
+      white-space: nowrap;
+    }
   }
 }
 </style>

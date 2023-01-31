@@ -1,20 +1,14 @@
 <template>
-  <el-config-provider namespace="ep" locale="locale">
-    <el-container class="container">
-      <el-container>
-        <el-aside width="180px"> <base-aside /></el-aside>
-        <el-container>
-          <el-header class="header"><base-header /></el-header>
-          <el-main>
-            <breadcrumb></breadcrumb>
-            <router-view />
-          </el-main>
-          <el-footer><footer-list /></el-footer>
-        </el-container>
-      </el-container>
-    </el-container>
+  <el-config-provider namespace="ep" :locale="appStore.locale">
+    <router-view />
   </el-config-provider>
 </template>
+
+<script setup lang="ts">
+import { ElConfigProvider } from "element-plus";
+import { useAppStore } from "@/store/slices/app";
+const appStore = useAppStore();
+</script>
 
 <style lang="scss">
 #app {

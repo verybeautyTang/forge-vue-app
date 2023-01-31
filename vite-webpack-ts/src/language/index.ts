@@ -1,23 +1,46 @@
+// 自定义国际化配置
 import { createI18n } from "vue-i18n";
-import en from "./config/en";
-import zh from "./config/zh";
+import { localStorage } from "@/utils/localStorage";
+
+// 本地语言包
+import enLocale from "./config/en";
+import zhCnLocale from "./config/zh";
 
 const messages = {
-  en: { ...en },
-  zh: { ...zh },
+  "zh-cn": {
+    ...zhCnLocale,
+  },
+  en: {
+    ...enLocale,
+  },
 };
 
-// 浏览器语言
-const lang = (navigator.language || "zh").toLocaleLowerCase();
+/**
+ * 获取当前系统使用语言字符串
+ *
+ * @returns zh-cn|en ...
+ */
+export const getLanguage = () => {
+  // 本地缓存获取
+  let language = localStorage.get("language");
+  if (language) {
+    return language;
+  }
+  // 浏览器使用语言
+  language = navigator.language.toLowerCase();
+  const locales = Object.keys(messages);
+  for (const locale of locales) {
+    if (language.indexOf(locale) > -1) {
+      return locale;
+    }
+  }
+  return "zh-cn";
+};
 
-// 存储在本地，若本地没有，采用浏览器语言
-const language = localStorage.getItem("language") || lang.split("-")[0] || "zh";
-
-localStorage.setItem("language", language);
-
-const i18n = new createI18n({
-  locale: language,
-  messages,
+const i18n = createI18n({
+  legacy: false,
+  locale: getLanguage(),
+  messages: messages,
 });
 
 export default i18n;

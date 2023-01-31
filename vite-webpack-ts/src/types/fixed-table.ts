@@ -6,12 +6,16 @@ export type TableHeader = {
 /** 订单表头 */
 export const OrderTableHeader: TableHeader[] = [
   {
-    name: "requirementType",
-    label: "需求类型",
+    name: "orderId",
+    label: "订单号",
   },
   {
-    name: "affiliatedProject",
-    label: "所属项目",
+    name: "projectName",
+    label: "项目名称",
+  },
+  {
+    name: "requirementType",
+    label: "需求类型",
   },
   {
     name: "founder",
@@ -23,7 +27,7 @@ export const OrderTableHeader: TableHeader[] = [
   },
   {
     name: "requirementFile",
-    label: "需求文件",
+    label: "需求文件/文本",
   },
   {
     name: "sourceLanguage",
@@ -34,17 +38,25 @@ export const OrderTableHeader: TableHeader[] = [
     label: "目标语种",
   },
   {
+    name: "createTime",
+    label: "创建时间",
+  },
+  {
+    name: "endTime",
+    label: "截止时间",
+  },
+  {
     name: "commitTime",
-    label: "提交时间",
+    label: "完成时间",
   },
   {
     name: "process",
-    label: "当前流程",
+    label: "当前处理人",
   },
-  {
-    name: "operation",
-    label: "操作",
-  },
+  // {
+  //   name: "operation",
+  //   label: "操作",
+  // },
 ];
 
 /** 文本库表头 */
@@ -202,3 +214,5 @@ export const TranslatorManagementTableHeader: TableHeader[] = [
     label: "操作",
   },
 ];
+
+/** 操作类型定义 */

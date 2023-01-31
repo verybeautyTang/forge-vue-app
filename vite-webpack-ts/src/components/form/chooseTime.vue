@@ -12,7 +12,6 @@ import chooseTime, {
 const props = withDefaults(defineProps<chooseTimeProps>(), {
   placeholder: "请选择时间",
   size: "default",
-  // list: chooseTime || undefined,
   clearable: false,
   multiple: false,
   width: "100%",
@@ -42,7 +41,7 @@ const select = ref(props.selected);
     @blur="selectBlur"
   >
     <el-option
-      v-for="item in props.list"
+      v-for="item in chooseTime"
       :key="item.value"
       :label="item.label"
       :value="item.value"
