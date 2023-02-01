@@ -6,7 +6,7 @@ import { ArrowDown } from "@element-plus/icons-vue";
 import { userStore } from "@/store/slices/user";
 
 const store = userStore();
-const language = ref("zh-cn");
+// const language = ref("zh-cn");
 const value = ref("");
 const options = [
   {

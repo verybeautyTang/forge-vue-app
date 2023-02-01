@@ -209,10 +209,48 @@ export const TranslatorManagementTableHeader: TableHeader[] = [
     name: "proofreadPrice",
     label: "校对单价",
   },
-  {
-    name: "operation",
-    label: "操作",
-  },
 ];
 
+export const Translator = [
+  {
+    userCode: "111",
+    company: "222",
+    userName: "333",
+    translationLanguage: "2222",
+    translationPrice: 2,
+    proofreadPrice: 3,
+  },
+  {
+    userCode: "222",
+    company: "222",
+    userName: "333",
+    translationLanguage: "2222",
+    translationPrice: 2,
+    proofreadPrice: 3,
+  },
+  {
+    userCode: "333",
+    company: "222",
+    userName: "333",
+    translationLanguage: "2222",
+    translationPrice: 2,
+    proofreadPrice: 3,
+  },
+  {
+    userCode: "444",
+    company: "222",
+    userName: "333",
+    translationLanguage: "2222",
+    translationPrice: 2,
+    proofreadPrice: 3,
+  },
+  {
+    userCode: "555",
+    company: "222",
+    userName: "333",
+    translationLanguage: "2222",
+    translationPrice: 2,
+    proofreadPrice: 3,
+  },
+];
 /** 操作类型定义 */

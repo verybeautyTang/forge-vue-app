@@ -51,5 +51,5 @@ interface Menu {
 }
 
 const props = defineProps<Menu>();
-console.log(props.navMenus);
+console.log("sssss", props.navMenus);
 </script>

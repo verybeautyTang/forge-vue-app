@@ -36,7 +36,7 @@ const data: IProps[] = [
 
 const issueHandle = (name: PendingType) => {
   router.push({
-    path: `/create-order/${encodeURIComponent(name)}/1`,
+    path: `/order-management/create-order/${encodeURIComponent(name)}/1`,
     // query: {
     //   name: encodeURIComponent(name),
     //   edit: 1,

@@ -41,7 +41,7 @@
 </template>
 <script lang="ts" setup>
 import AuthDrawer from "./AuthDrawer.vue";
-import type { Action } from "element-plus";
+import { Action, ElMessage, ElMessageBox } from "element-plus";
 
 interface TableInterface {
   date: string;

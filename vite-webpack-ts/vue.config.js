@@ -2,7 +2,8 @@ const { defineConfig } = require("@vue/cli-service");
 const AutoImport = require("unplugin-auto-import/webpack");
 const Components = require("unplugin-vue-components/webpack");
 const { ElementPlusResolver } = require("unplugin-vue-components/resolvers");
-import * as path from "path";
+// import * as path from "path";
+const path = require("path");
 
 const { resolve } = path;
 
@@ -29,6 +30,9 @@ module.exports = defineConfig({
         store: "/src/store",
       },
     },
+    // build: {
+    //   outDir: PATHS.build,
+    // },
     plugins: [
       require("unplugin-auto-import/webpack")({
         imports: ["vue", "vue-router"],

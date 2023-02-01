@@ -30,11 +30,11 @@ export interface PaginationProps {
 
 export interface PaginationEmit {
   /** 页数大小改变 */
-  handleSizeChange?: (val: number) => void;
+  (e: "handleSizeChange", val: number): void;
   /** 分页 */
-  handleCurrentChange?: (val: number) => void;
+  (e: "handleCurrentChange", val: number): void;
   /** 清空条数和页码 */
-  clearAll?: () => void;
+  (e: "clearAll"): void;
 }
 
 const props = withDefaults(defineProps<PaginationProps>(), {
@@ -53,16 +53,16 @@ const pageSize = ref(props.currentSize);
 
 const handleSizeChange = (val: number) => {
   console.log(`${val} items per page`);
-  emits?.handleSizeChange?.(val);
+  emits("handleSizeChange", val);
 };
 
 const handleCurrentChange = (val: number) => {
   console.log(`current page: ${val}`);
-  emits?.handleCurrentChange?.(val);
+  emits("handleCurrentChange", val);
 };
 
 const clearAll = () => {
-  emits?.clearAll?.();
+  emits("clearAll");
 };
 </script>
 <style scoped>

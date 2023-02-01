@@ -27,6 +27,10 @@ export default ({ mode }: ConfigEnv): UserConfig => {
         },
       },
     },
+    //生产模式打包配置
+    build: {
+      outDir: "dist", //Specify the output directory (relative to project root).
+    },
     plugins: [
       vue(),
       htmlTemplate(),

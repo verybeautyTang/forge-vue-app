@@ -16,7 +16,7 @@ const orderManagement: Array<RouteRecordRaw> = [
     redirect: "/order-management/issue-order",
     children: [
       {
-        path: "/issue-order",
+        path: "/order-management/issue-order",
         name: "issueOrder",
         meta: {
           title: "发起订单申请",
@@ -25,7 +25,7 @@ const orderManagement: Array<RouteRecordRaw> = [
         component: () => import("../views/issueOrder/index.vue"),
       },
       {
-        path: "/create-order/:name/:edit",
+        path: "/order-management/create-order/:name/:edit",
         name: "createOrder",
         meta: {
           title: "发起订单申请",
@@ -44,7 +44,7 @@ const orderManagement: Array<RouteRecordRaw> = [
         component: () => import("../views/orderList/index.vue"),
       },
       {
-        path: "/pending-order",
+        path: "/order-management/pending-order",
         name: "pendingOrder",
         meta: {
           title: "待处理订单",
@@ -53,7 +53,7 @@ const orderManagement: Array<RouteRecordRaw> = [
         component: () => import("../views/pendingOrder/index.vue"),
       },
       {
-        path: "/draft-order",
+        path: "/order-management/draft-order",
         name: "draftOrder",
         meta: {
           title: "订单管理",
@@ -87,7 +87,7 @@ const quantityMangement: Array<RouteRecordRaw> = [
         component: () => import("../views/quantityList/index.vue"),
       },
       {
-        path: "/source-ext-audit",
+        path: "/quantity-mangement/source-ext-audit",
         name: "sourceTextAudit",
         meta: {
           title: "源文本审核",
@@ -96,7 +96,7 @@ const quantityMangement: Array<RouteRecordRaw> = [
         component: () => import("../views/sourceTextAudit/index.vue"),
       },
       {
-        path: "/quantity-dispose",
+        path: "/quantity-mangement/quantity-dispose",
         name: "quantityDispose",
         meta: {
           title: "需求处理",
@@ -105,7 +105,7 @@ const quantityMangement: Array<RouteRecordRaw> = [
         component: () => import("../views/quantityDispose/index.vue"),
       },
       {
-        path: "/text-acceptance",
+        path: "/quantity-mangement/text-acceptance",
         name: "textAcceptance",
         meta: {
           title: "文本验收",
@@ -130,7 +130,7 @@ const backMangement: Array<RouteRecordRaw> = [
     redirect: "/back-mangement/authority-management",
     children: [
       {
-        path: "/authority-management",
+        path: "/back-mangement/authority-management",
         name: "authorityManagement",
         meta: {
           title: "人员管理",
@@ -140,7 +140,7 @@ const backMangement: Array<RouteRecordRaw> = [
           import("../views/authorityManagement/AuthorityManagement.vue"),
       },
       {
-        path: "/translator-management",
+        path: "/back-mangement/translator-management",
         name: "translatorManagement",
         meta: {
           title: "译者管理",
@@ -149,7 +149,7 @@ const backMangement: Array<RouteRecordRaw> = [
         component: () => import("../views/translatorManagement/index.vue"),
       },
       {
-        path: "/other-management",
+        path: "/back-mangement/other-management",
         name: "otherManagement",
         meta: {
           title: "其他管理",
