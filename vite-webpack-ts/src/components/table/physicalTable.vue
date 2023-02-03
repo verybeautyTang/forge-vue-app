@@ -20,6 +20,7 @@ import operation from "./physicalOperation.vue";
  *    换行
  */
 type IProps = {
+  i18prefix: string,
   /** 多选框 */
   isShowCheckboxes?: boolean;
   /** 顺序排列index */
@@ -95,7 +96,7 @@ const emits = defineEmits<EmitProps>();
 <template>
   <el-table :data="date" style="width: 100%" empty-text="暂无数据">
     <template v-for="(col, index) in props.header" :key="index">
-      <el-table-column :prop="col.name" :label="col.label" />
+      <el-table-column :prop="col.name" :label="$t(props.i18prefix +'.' +  col.label)" />
     </template>
     <el-table-column fixed="right" label="操作" width="200">
       <template #default>

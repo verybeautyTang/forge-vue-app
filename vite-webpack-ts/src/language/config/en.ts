@@ -59,6 +59,28 @@ export default {
     remindTime: "Remind Once",
     updateButton: "Update Settings",
   },
+    /** 权限管理 */
+    authManager: {
+      "userId": "UserId",
+      "userName": "userName",
+      "name":"Name",
+      "authToken": "Permission",
+      "project":"Project",
+      "language": "Language Type ",
+      "userType":"User Status",    
+    },
+    /** 译者管理 */
+    translatorManager: {
+      "translatorId": "TranslatorId",
+      "translatorName": "Account",
+      "company":"Company",
+      "name": "Name",
+      "phone":"Phone",
+      "language": "Language Type",
+      "translationUnitPrice":"Translation Unit Price", 
+      "checkUnitPrice":"Check Unit Price", 
+      "currencyOfSettlement":"Currency Of Settlement", 
+    },
   // 登录页面国际化
   login: {
     title: "vue3-element-admin",

@@ -41,6 +41,28 @@ export default {
     CutOffTime: "截止日期",
   },
 
+  /** 权限管理 */
+  authManager: {
+    "userId": "用户Id",
+    "userName": "用户名",
+    "name":"姓名",
+    "authToken": "权限",
+    "project":"所属项目",
+    "language": "语言种类",
+    "userType":"用户状态",    
+  },
+  /** 译者管理 */
+  translatorManager: {
+    "translatorId": "译者id",
+    "translatorName": "账号",
+    "company":"公司",
+    "name": "姓名",
+    "phone":"手机号",
+    "language": "语言种类",
+    "translationUnitPrice":"翻译单价", 
+    "checkUnitPrice":"校对单价", 
+    "CurrencyOfSettlement":"结算币种", 
+  },
   /** 其他设置 */
   otherSettings: {
     title: "预警系统设置",

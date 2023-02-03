@@ -3,7 +3,7 @@
   <div>
     <div class="add-authority">
       <el-button class="add-list" type="primary" @click="addUser"
-        >添加权限</el-button
+        >创建用户</el-button
       >
     </div>
     <el-table :data="tableData" border style="width: 100%">
@@ -33,7 +33,7 @@
     </el-table>
     <auth-drawer
       :isShow="state.showDrawer"
-      :title="state.isEdit ? '修改权限' : '添加权限'"
+      :title="state.isEdit ? '修改用户信息' : '创建用户'"
       :form="state.isEdit ? state.form : {}"
       @updateDialog="updateDialog"
     />

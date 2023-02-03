@@ -186,28 +186,40 @@ export const PersonnelManagementTableHeader: TableHeader[] = [
 /** 译者管理 */
 export const TranslatorManagementTableHeader: TableHeader[] = [
   {
-    name: "userCode",
-    label: "账号",
+    name: "translatorId",
+    label: "translatorId",
+  },
+  {
+    name: "translatorName",
+    label: "translatorName",
   },
   {
     name: "company",
-    label: "公司",
+    label: "company",
   },
   {
-    name: "userName",
-    label: "姓名",
+    name: "name",
+    label: "name",
   },
   {
-    name: "translationLanguage",
-    label: "翻译语种",
+    name: "phone",
+    label: "phone",
   },
   {
-    name: "translationPrice",
-    label: "翻译单价",
+    name: "language",
+    label: "language",
   },
   {
-    name: "proofreadPrice",
-    label: "校对单价",
+    name: "translationUnitPrice",
+    label: "translationUnitPrice",
+  },
+  {
+    name: "checkUnitPrice",
+    label: "checkUnitPrice",
+  },
+  {
+    name: "CurrencyOfSettlement",
+    label: "CurrencyOfSettlement",
   },
 ];
 

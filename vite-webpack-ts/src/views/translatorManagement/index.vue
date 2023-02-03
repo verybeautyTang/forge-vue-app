@@ -1,28 +1,29 @@
 <template>
   <div class="translator-container">
-    <!-- <div class="translator-header mb-4">
+    <div class="translator-header mb-4">
       <el-button type="primary">导出结算单</el-button>
       <el-button type="primary">创建译者</el-button>
-    </div> -->
+    </div>
     <div class="translator-content">
-      <!-- <physical-table
+      <physical-table
+        i18prefix="translatorManager"
         :header="TranslatorManagementTableHeader"
         :date="Translator"
         :type="OperationStatusEnmu.Translation"
         @exportPay="(item:string | IOperationProps) => exportPay(item)"
         @changeAccount="(item:string | IOperationProps) => changeAccount(item)"
         @closeAccount="(item:string | IOperationProps) => closeAccount(item)"
-      ></physical-table> -->
+      ></physical-table>
       <virtual-table
         :isShowCheckBox="true"
         :fixed="true"
         :type="VirtualOperationStatusEnmu.TextAndProjectOperations"
       ></virtual-table>
-      <pagination-table
+      <!-- <pagination-table
         :total="Translator.length"
         @handleCurrentChange="(item:number) => handleCurrentChange(item)"
         @handleSizeChange="(item:number) => handleSizeChange(item)"
-      ></pagination-table>
+      ></pagination-table> -->
     </div>
   </div>
 </template>
