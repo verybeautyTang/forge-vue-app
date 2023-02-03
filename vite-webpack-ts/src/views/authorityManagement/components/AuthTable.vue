@@ -122,6 +122,6 @@ const updateDialog = (row: TableInterface) => {
 .add-authority {
   display: flex;
   padding-bottom: 2rem;
-  justify-content: end;
+  justify-content: flex-end;
 }
 </style>

@@ -22,7 +22,7 @@ specifiers:
   core-js: ^3.8.3
   cross-env: ^7.0.3
   css-loader: ^6.7.3
-  element-plus: ^2.2.29
+  element-plus: ^2.2.27
   eslint: ^7.32.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-prettier: ^4.0.0
@@ -45,7 +45,7 @@ specifiers:
   vite-plugin-environment: ^1.1.1
   vite-plugin-html-template: ^1.1.2
   vite-plugin-svg-icons: ^2.0.1
-  vue: ^3.2.13
+  vue: ^3.2.47
   vue-i18n: 9.3.0-beta.12
   vue-router: ^4.0.3
   webpack: ^5.75.0
@@ -63,7 +63,7 @@ dependencies:
   core-js: 3.27.2
   cross-env: 7.0.3
   css-loader: 6.7.3_webpack@5.75.0
-  element-plus: 2.2.29_vue@3.2.47
+  element-plus: 2.2.27_vue@3.2.47
   js-cookie: 3.0.1
   lint-staged: 12.5.0
   pinia: 2.0.30_oxdpuez7ry32dmrf5ghvfpjwu4
@@ -4193,8 +4193,8 @@ packages:
   /electron-to-chromium/1.4.285:
     resolution: {integrity: sha512-47o4PPgxfU1KMNejz+Dgaodf7YTcg48uOfV1oM6cs3adrl2+7R+dHkt3Jpxqo0LRCbGJEzTKMUt0RdvByb/leg==}
 
-  /element-plus/2.2.29_vue@3.2.47:
-    resolution: {integrity: sha512-g4dcrURrKkR5uUX8n5RVnnqGnimoki9HfqS4yHHG6XwCHBkZGozdq4x+478BzeWUe31h++BO+7dakSx4VnM8RQ==}
+  /element-plus/2.2.27_vue@3.2.47:
+    resolution: {integrity: sha512-P04HDOZBYDdvlYuleuCZRULzAc5xJVOBfLDK9xWxVo0vyo8ntdaXS5sTU+/76vrNzuO3FhLn9kvrsbiJEVa1jg==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:

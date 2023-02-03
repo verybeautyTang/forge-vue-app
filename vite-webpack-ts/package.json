@@ -22,7 +22,7 @@
     "core-js": "^3.8.3",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.3",
-    "element-plus": "^2.2.29",
+    "element-plus": "^2.2.27",
     "js-cookie": "^3.0.1",
     "lint-staged": "^12.4.1",
     "pinia": "^2.0.28",
@@ -30,7 +30,7 @@
     "ts-node": "^10.9.1",
     "vite-plugin-environment": "^1.1.1",
     "vite-plugin-html-template": "^1.1.2",
-    "vue": "^3.2.13",
+    "vue": "^3.2.47",
     "vue-i18n": "9.3.0-beta.12",
     "vue-router": "^4.0.3",
     "webpack": "^5.75.0"
