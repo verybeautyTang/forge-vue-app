@@ -1,7 +1,13 @@
 export enum PendingType {
-  Special = "特殊需求",
-  Project = "项目需求",
-  Text = "文本需求",
+  Special = "issueOrder.SpecialDemand",
+  Project = "issueOrder.ProjectDemand",
+  Text = "issueOrder.TextDemand",
+}
+
+export enum PendingDetailType {
+  Special = "issueOrder.SpecialDetail",
+  Project = "issueOrder.ProjectDetail",
+  Text = "issueOrder.TextDetail",
 }
 
 export enum PendingUploadName {

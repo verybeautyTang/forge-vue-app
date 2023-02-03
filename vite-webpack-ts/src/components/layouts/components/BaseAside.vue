@@ -6,11 +6,7 @@
     @open="handleOpen"
     @close="handleClose"
   >
-    <el-image
-      src="../../../public/img/logo.jpg"
-      fit="fill"
-      class="aside-avatar"
-    />
+    <el-image src="../../../../public/img/logo.jpg" fit="fill" class="aside-avatar" />
     <nav-list :navMenus="routes" />
   </el-menu>
 </template>

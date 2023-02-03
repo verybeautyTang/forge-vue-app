@@ -108,7 +108,7 @@ const ClickFunction = {
   closeAccount: closeAccount,
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .operation_container {
   margin-bottom: 1%;
   color: #ffffff !important;

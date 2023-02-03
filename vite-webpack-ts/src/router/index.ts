@@ -9,7 +9,7 @@ const orderManagement: Array<RouteRecordRaw> = [
     name: "orderManagement",
     component: Layout,
     meta: {
-      title: "订单中心",
+      title: "OrderList",
       showType: [],
       icon: "home",
     },
@@ -19,7 +19,7 @@ const orderManagement: Array<RouteRecordRaw> = [
         path: "/order-management/issue-order",
         name: "issueOrder",
         meta: {
-          title: "发起订单申请",
+          title: "IssueOrder",
           showType: [],
         },
         component: () => import("../views/issueOrder/index.vue"),
@@ -28,7 +28,7 @@ const orderManagement: Array<RouteRecordRaw> = [
         path: "/order-management/create-order/:name/:edit",
         name: "createOrder",
         meta: {
-          title: "发起订单申请",
+          title: "CreateOrder",
           showType: [],
           hidden: true,
         },
@@ -38,7 +38,7 @@ const orderManagement: Array<RouteRecordRaw> = [
         path: "/order-list",
         name: "orderList",
         meta: {
-          title: "我的全部订单",
+          title: "Myorder",
           showType: [],
         },
         component: () => import("../views/orderList/index.vue"),
@@ -47,16 +47,16 @@ const orderManagement: Array<RouteRecordRaw> = [
         path: "/order-management/pending-order",
         name: "pendingOrder",
         meta: {
-          title: "待处理订单",
+          title: "PendingOrder",
           showType: [],
         },
         component: () => import("../views/pendingOrder/index.vue"),
       },
       {
         path: "/order-management/draft-order",
-        name: "draftOrder",
+        name: "orderManager",
         meta: {
-          title: "订单管理",
+          title: "OrderManager",
           showType: [],
         },
         component: () => import("../views/draftsOrder/index.vue"),
@@ -71,7 +71,7 @@ const quantityMangement: Array<RouteRecordRaw> = [
     name: "quantityMangement",
     component: Layout,
     meta: {
-      title: "需求管理",
+      title: "QuantityMangement",
       showType: [],
       icon: "home",
     },
@@ -81,7 +81,7 @@ const quantityMangement: Array<RouteRecordRaw> = [
         path: "/quantity-list",
         name: "quantityList",
         meta: {
-          title: "需求列表",
+          title: "QuantityList",
           showType: [],
         },
         component: () => import("../views/quantityList/index.vue"),
@@ -90,7 +90,7 @@ const quantityMangement: Array<RouteRecordRaw> = [
         path: "/quantity-mangement/source-ext-audit",
         name: "sourceTextAudit",
         meta: {
-          title: "源文本审核",
+          title: "SourceTextAudit",
           showType: [],
         },
         component: () => import("../views/sourceTextAudit/index.vue"),
@@ -99,7 +99,7 @@ const quantityMangement: Array<RouteRecordRaw> = [
         path: "/quantity-mangement/quantity-dispose",
         name: "quantityDispose",
         meta: {
-          title: "需求处理",
+          title: "QuantityDispose",
           showType: [],
         },
         component: () => import("../views/quantityDispose/index.vue"),
@@ -108,7 +108,7 @@ const quantityMangement: Array<RouteRecordRaw> = [
         path: "/quantity-mangement/text-acceptance",
         name: "textAcceptance",
         meta: {
-          title: "文本验收",
+          title: "TextAcceptance",
           showType: [],
         },
         component: () => import("../views/textAcceptance/index.vue"),
@@ -123,7 +123,7 @@ const backMangement: Array<RouteRecordRaw> = [
     name: "backMangement",
     component: Layout,
     meta: {
-      title: "需求管理",
+      title: "BackMangement",
       showType: [],
       icon: "home",
     },
@@ -133,7 +133,7 @@ const backMangement: Array<RouteRecordRaw> = [
         path: "/back-mangement/authority-management",
         name: "authorityManagement",
         meta: {
-          title: "人员管理",
+          title: "AuthorityManagement",
           showType: [],
         },
         component: () =>
@@ -143,7 +143,7 @@ const backMangement: Array<RouteRecordRaw> = [
         path: "/back-mangement/translator-management",
         name: "translatorManagement",
         meta: {
-          title: "译者管理",
+          title: "TranslatorManagement",
           showType: [],
         },
         component: () => import("../views/translatorManagement/index.vue"),
@@ -152,7 +152,7 @@ const backMangement: Array<RouteRecordRaw> = [
         path: "/back-mangement/other-management",
         name: "otherManagement",
         meta: {
-          title: "其他管理",
+          title: "OtherManagement",
           showType: [],
         },
         component: () => import("../views/otherManagement/index.vue"),
@@ -180,7 +180,7 @@ export const routes: Array<RouteRecordRaw> = [
     component: Layout,
     // component: () => import("../views/dashboard/index.vue"),
     meta: {
-      title: "主页",
+      title: "Home",
       showType: [],
       icon: "home",
     },

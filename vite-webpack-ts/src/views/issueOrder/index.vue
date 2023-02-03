@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { PendingType } from "@/types/pending-order";
+import { PendingDetailType, PendingType } from "@/types/pending-order";
 import { RoleList } from "@/types/role";
 //引入路由函数
 import { useRouter } from "vue-router";
@@ -18,18 +18,18 @@ type IProps = {
 const data: IProps[] = [
   {
     name: PendingType.Project,
-    desc: "含键值的游戏内文本翻译",
+    desc: PendingDetailType.Project,
     color: "#169BD5",
     Disabledrole: [RoleList.GeneralUser, RoleList.ProjectTranslator],
   },
   {
     name: PendingType.Text,
-    desc: "运营公告、社媒文案等纯文本翻译",
+    desc: PendingDetailType.Text,
     color: "#70B603",
   },
   {
     name: PendingType.Special,
-    desc: "含图片的PR稿、PPT、Excel等文件翻译",
+    desc: PendingDetailType.Special,
     color: "#C280FF",
   },
 ];
@@ -48,15 +48,15 @@ const issueHandle = (name: PendingType) => {
   <div class="issue-container">
     <el-row justify="space-evenly" class="issue-order">
       <el-col
-        :span="3"
+        :span="5"
         v-for="item in data"
         :key="item.name"
         @click="issueHandle(item.name)"
       >
         <div class="issue-button" :style="{ backgroundColor: item.color }">
-          {{ item.name }}
+          {{ $t(item.name) }}
         </div>
-        <span class="issue-desc">{{ item.desc }}</span>
+        <span class="issue-desc">{{ $t(item.desc) }}</span>
       </el-col>
     </el-row>
   </div>
@@ -80,7 +80,7 @@ const issueHandle = (name: PendingType) => {
     .issue-desc {
       font-size: 14px;
       color: #000000;
-      white-space: nowrap;
+      // white-space: nowrap;
     }
   }
 }

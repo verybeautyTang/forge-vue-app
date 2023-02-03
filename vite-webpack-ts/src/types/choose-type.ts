@@ -6,9 +6,9 @@ export enum chooseTypeListType {
 
 // 默认时间选择类型
 export enum chooseType {
-  project = "项目需求",
-  text = "文本需求",
-  special = "特殊需求",
+  Special = "issueOrder.SpecialDemand",
+  Project = "issueOrder.ProjectDemand",
+  Text = "issueOrder.TextDemand",
 }
 
 // 数据类型

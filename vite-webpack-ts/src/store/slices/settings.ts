@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import defaultSettings from "@types/setting";
+import defaultSettings from "@/types/setting";
 import { ref } from "vue";
 import { useStorage } from "@vueuse/core";
 

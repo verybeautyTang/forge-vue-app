@@ -8,13 +8,13 @@
       :rules="rules"
       style="max-width: 460px"
     >
-      <el-form-item label="发起人(Presenter)">
+      <el-form-item :label="$t('createOrder.Presenter')">
         <span>{{ formLabelAlign.username }}</span>
       </el-form-item>
-      <el-form-item label="需求类型(Requirement Type)">
+      <el-form-item :label="$t('createOrder.RequirementType')">
         <span>{{ formLabelAlign.Pendingtype }}</span>
       </el-form-item>
-      <el-form-item label="所属项目(Project)">
+      <el-form-item :label="$t('createOrder.Project')">
         <choose-project
           :projects="options"
           :selected="formLabelAlign.project"
@@ -22,14 +22,14 @@
         ></choose-project>
       </el-form-item>
 
-      <el-form-item label="源语种(Source Language)">
+      <el-form-item :label="$t('createOrder.SourceLanguage')">
         <choose-language
           placeholder="请选择源语种"
           :list="options"
           :selected="formLabelAlign.sourceLanguage"
         ></choose-language>
       </el-form-item>
-      <el-form-item label="目标语种(Target Language)">
+      <el-form-item :label="$t('createOrder.TargetLanguage')">
         <choose-language
           placeholder="请选择目标语种(可多选)"
           :multiple="true"
@@ -37,7 +37,7 @@
           :list="options"
         ></choose-language>
       </el-form-item>
-      <el-form-item label="填写需求类型(Target Language)">
+      <el-form-item :label="$t('createOrder.TargetLanguage')">
         <el-radio-group v-model="formLabelAlign.textType" class="ml-4">
           <el-radio label="uploadFile" size="large">上传文件</el-radio>
           <el-radio label="addTable" size="large">表格填充</el-radio>
@@ -79,7 +79,7 @@ import { useRoute } from "vue-router";
 import chooseProject from "@/components/form/chooseProject.vue";
 import chooseLanguage from "@/components/form/chooseLanguage.vue";
 import formUpload from "@/components/form/formUpload.vue";
-import formTable from "./table.vue";
+import formTable from "./createTable.vue";
 const labelPosition = ref("right");
 const store = userStore();
 const route = useRoute();

@@ -25,5 +25,7 @@ module.exports = {
     ],
     "@typescript-eslint/no-empty-function": "off", // 关闭空方法检查
     "@typescript-eslint/no-explicit-any": "off", // 关闭any类型的警告
+    // 添加组件命名忽略规则
+    "vue/multi-word-component-names": 0,
   },
 };

@@ -1,8 +1,15 @@
 {
+    "ts-node": {
+      "transpileOnly": true,
+      "compilerOptions": {
+        "module": "commonjs"
+      }
+    },
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
     "strict": true,
+    "allowJs": true,
     "jsx": "preserve",
     "moduleResolution": "node",
     "experimentalDecorators": true,
@@ -30,7 +37,8 @@
       "dom",
       "dom.iterable",
       "scripthost"
-    ]
+    ],
+    "types": ["element-plus/global"],
   },
   "include": [
     "src/**/*.ts",
@@ -38,7 +46,8 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx",
-    "./src/types/auto-imports.d.ts"
+    "types/**/*.d.ts",
+    "auto-imports.d.ts"
   ],
   "exclude": [
     "node_modules",

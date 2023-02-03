@@ -1,10 +1,9 @@
 <template>
   <el-config-provider namespace="ep" locale="locale">
-    <el-container class="container">
-      <el-container>
+    <el-container class="layout_container">
         <el-aside width="180px"> <base-aside /></el-aside>
         <el-container>
-          <el-header class="header"><base-header /></el-header>
+          <el-header class="layout_header"><base-header /></el-header>
           <el-main>
             <breadcrumb></breadcrumb>
             <router-view />
@@ -12,26 +11,16 @@
           <!-- <el-footer><footer-list /></el-footer> -->
         </el-container>
       </el-container>
-    </el-container>
   </el-config-provider>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  text-align: center;
-  color: var(--ep-text-color-primary);
-  color: #2c3e50;
+<style lang="scss" scoped>
+.layout_container {
   height: 100%;
+  .layout_header {
+    padding: 0;
+    margin: 0;
+  }
 }
-.container {
-  height: 100%;
-}
-.header {
-  padding: 0;
-  margin: 0;
-}
+
 </style>

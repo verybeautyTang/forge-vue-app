@@ -11,7 +11,7 @@
         <i :class="navMenu.meta.icon"></i>
         <!--标题-->
         <template v-slot:title>
-          <span>{{ navMenu?.meta.title }}</span>
+          <span>{{ generateTitle(navMenu?.meta?.title) }}</span>
         </template>
         <!-- <span slot="title">{{ navMenu?.meta.title }}</span> -->
       </el-menu-item>
@@ -23,7 +23,7 @@
       >
         <template v-slot:title>
           <i :class="navMenu.meta.icon"></i>
-          <span> {{ navMenu.meta.title }}</span>
+          <span> {{ generateTitle(navMenu?.meta?.title) }}</span>
         </template>
         <!--递归组件，把遍历的值传回子组件，完成递归调用-->
         <nav-list :navMenus="navMenu.children"></nav-list>
@@ -33,6 +33,7 @@
 </template>
 
 <script setup lang="ts">
+import { generateTitle } from "@/utils/i18n";
 interface Params {
   path: string;
   name: string;

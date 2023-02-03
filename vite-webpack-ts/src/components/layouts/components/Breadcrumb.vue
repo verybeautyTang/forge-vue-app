@@ -5,7 +5,7 @@
       :key="item.path"
       :to="{ path: item?.path }"
     >
-      {{ item?.meta?.title }}
+      {{ generateTitle(item?.meta?.title) }}
     </el-breadcrumb-item>
   </el-breadcrumb>
 </template>
@@ -14,6 +14,7 @@
 import { useRouter } from "vue-router";
 import { ArrowRight } from "@element-plus/icons-vue";
 import { computed } from "vue";
+import { generateTitle } from "@/utils/i18n";
 const router = useRouter();
 // 当前路由的匹配记录
 console.log(router.currentRoute.value.matched);

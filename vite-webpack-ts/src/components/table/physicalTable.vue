@@ -1,7 +1,7 @@
 <!-- 属性 -->
 <script lang="ts" setup>
 import { IOperationProps, OperationStatusEnmu } from "@/types/operation";
-import operation from "./operation.vue";
+import operation from "./physicalOperation.vue";
 
 /**
  * 属性
@@ -91,8 +91,6 @@ const props = withDefaults(defineProps<IProps>(), {
 });
 
 const emits = defineEmits<EmitProps>();
-
-console.log(emits);
 </script>
 <template>
   <el-table :data="date" style="width: 100%" empty-text="暂无数据">

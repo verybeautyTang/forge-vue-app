@@ -2,38 +2,15 @@
 import { ref } from "vue";
 import { toggleDark } from "@/composables";
 import { ArrowDown } from "@element-plus/icons-vue";
-
+import LangSelect from "@/components/LangSelect/index.vue";
 import { userStore } from "@/store/slices/user";
 
 const store = userStore();
-// const language = ref("zh-cn");
-const value = ref("");
-const options = [
-  {
-    value: "zh",
-    label: "简体中文",
-  },
-  {
-    value: "en",
-    label: "English",
-  },
-];
 </script>
 <template>
   <div class="header-container">
-    <el-select
-      v-model="value"
-      class="m-2"
-      placeholder="请选择语言"
-      size="large"
-    >
-      <el-option
-        v-for="item in options"
-        :key="item.value"
-        :label="item.label"
-        :value="item.value"
-      />
-    </el-select>
+    <!--语言选择-->
+    <lang-select />
     <el-avatar
       class="header-avatar"
       :size="40"
@@ -56,15 +33,15 @@ const options = [
     </el-dropdown>
     <button
       @click="toggleDark()"
-      class="border-none w-full bg-transparent cursor-pointer"
-      style="height: var(--ep-menu-item-height)"
+      class="border-none w-10 bg-transparent cursor-pointer"
+      style="height: var(--ep-menu-item-height); background-color: aqua"
     >
       <i inline-flex i="dark:ep-moon ep-sunny" />
     </button>
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .header-container {
   display: flex;
   justify-content: flex-end;

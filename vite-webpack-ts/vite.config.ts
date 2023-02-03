@@ -1,6 +1,7 @@
 import { UserConfig, ConfigEnv, loadEnv } from "vite";
 import path from "path";
 import vue from "@vitejs/plugin-vue";
+import vueJsx from "@vitejs/plugin-vue-jsx";
 import htmlTemplate from "vite-plugin-html-template";
 import EnvironmentPlugin from "vite-plugin-environment";
 import AutoImport from "unplugin-auto-import/vite";
@@ -33,6 +34,7 @@ export default ({ mode }: ConfigEnv): UserConfig => {
     },
     plugins: [
       vue(),
+      vueJsx(),
       htmlTemplate(),
       EnvironmentPlugin("all", { prefix: "VUE_APP_" }),
       Components({
@@ -47,10 +49,10 @@ export default ({ mode }: ConfigEnv): UserConfig => {
       AutoImport({
         imports: ["vue", "vue-router"],
         resolvers: [ElementPlusResolver()],
-        eslintrc: {
-          enabled: true,
-        },
-        dts: "./src/types/auto-imports.d.ts",
+        // eslintrc: {
+        //   enabled: true,
+        // },
+        // dts: "./src/types/auto-imports.d.ts",
       }),
       createSvgIconsPlugin({
         // 指定需要缓存的图标文件夹

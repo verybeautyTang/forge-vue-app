@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { login, logOut } from "@/api/user";
+// import { login, logOut } from "@/api/user";
 export const userStore = defineStore("users", {
   state: () => {
     return {
@@ -17,11 +17,11 @@ export const userStore = defineStore("users", {
   // action 里的方法相互之间调用，直接用 this 访问即可
   actions: {
     async getUserInfo() {
-      this.userInfo = await login();
+      // this.userInfo = await login();
       console.log(this.userInfo);
     },
     async logOut() {
-      await logOut();
+      // await logOut();
       this.userInfo = {};
     },
     feLogOut() {
