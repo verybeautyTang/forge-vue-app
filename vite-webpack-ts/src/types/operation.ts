@@ -185,12 +185,12 @@ export const AuthorityManager: IOperationProps[] = [
     clickFunction: "changeAccount",
     color: OperationBackgroundColor.Change,
   },
-  {
-    name: "停用",
-    id: "detail",
-    clickFunction: "closeAccount",
-    color: OperationBackgroundColor.Cancel,
-  },
+  // {
+  //   name: "停用",
+  //   id: "detail",
+  //   clickFunction: "closeAccount",
+  //   color: OperationBackgroundColor.Cancel,
+  // },
 ];
 
 /** 翻译员管理 */
@@ -207,12 +207,12 @@ export const TranslationManager: IOperationProps[] = [
     clickFunction: "changeAccount",
     color: OperationBackgroundColor.Change,
   },
-  {
-    name: "停用",
-    id: "detail",
-    clickFunction: "closeAccount",
-    color: OperationBackgroundColor.Cancel,
-  },
+  // {
+  //   name: "停用",
+  //   id: "detail",
+  //   clickFunction: "closeAccount",
+  //   color: OperationBackgroundColor.Cancel,
+  // },
 ];
 
 export enum OperationStatusEnmu {
