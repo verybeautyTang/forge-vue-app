@@ -35,6 +35,17 @@ module.exports = defineConfig({
         // modify the options...
         return options;
       });
+    config.module
+      .rule("worker-loader")
+      .test(/\.worker\.js$/)
+      .use({
+        loader: "worker-loader",
+        options: {
+          inline: true,
+        },
+      })
+      .loader("worker-loader")
+      .end();
   },
   pages: {
     index: {
@@ -76,7 +87,7 @@ module.exports = defineConfig({
       }),
     ],
     devServer: {
-      port: 5005,
+      port: 3003,
       proxy: {
         [`${API_PREFIX}`]: {
           target: API_HOST,

@@ -76,7 +76,7 @@ export default ({ mode }: ConfigEnv): UserConfig => {
           // 线上API地址
           // target: "xxxxx.xxxx.xxx",
           // 本地API地址
-          target: "http://localhost:5005",
+          target: "http://localhost:3003",
           changeOrigin: true,
           rewrite: path =>
             path.replace(new RegExp("^" + env.VITE_APP_BASE_API), ""),
@@ -127,7 +127,7 @@ export default ({ mode }: ConfigEnv): UserConfig => {
 //     },
 //   },
 //   server: {
-//     port: 5005,
+//     port: 3003,
 //     proxy: {
 //       "/dev": {
 //         target: "https://fansclub.happyelements.com/v3_server_test",

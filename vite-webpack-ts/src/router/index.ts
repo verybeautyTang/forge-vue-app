@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import HomeView from "../views/HomeView.vue";
 export const Layout = () => import("@/components/layouts/index.vue");
 
 // 订单中心

@@ -49,6 +49,7 @@ specifiers:
   vue-i18n: 9.3.0-beta.12
   vue-router: ^4.0.3
   webpack: ^5.75.0
+  worker-loader: ^3.0.8
 
 dependencies:
   '@babel/core': 7.20.12
@@ -101,6 +102,7 @@ devDependencies:
   unplugin-vue-components: 0.22.12_vue@3.2.47
   vite: 3.2.5_lbqvpzzfiyzoyvzwk6dcvhbf4y
   vite-plugin-svg-icons: 2.0.1_vite@3.2.5
+  worker-loader: 3.0.8_webpack@5.75.0
 
 packages:
 
@@ -9173,6 +9175,17 @@ packages:
   /word-wrap/1.2.3:
     resolution: {integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /worker-loader/3.0.8_webpack@5.75.0:
+    resolution: {integrity: sha512-XQyQkIFeRVC7f7uRhFdNMe/iJOdO6zxAaR3EWbDp45v3mDhrTi+++oswKNxShUNjPC/1xUp5DB29YKLhFo129g==}
+    engines: {node: '>= 10.13.0'}
+    peerDependencies:
+      webpack: ^4.0.0 || ^5.0.0
+    dependencies:
+      loader-utils: 2.0.4
+      schema-utils: 3.1.1
+      webpack: 5.75.0
     dev: true
 
   /wrap-ansi/3.0.1:
