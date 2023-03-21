@@ -47,7 +47,7 @@
     "tests/**/*.ts",
     "tests/**/*.tsx",
     "types/**/*.d.ts",
-    "auto-imports.d.ts"
+    "../auto-imports.d.ts"
   ],
   "exclude": [
     "node_modules",
