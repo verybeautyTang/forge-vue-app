@@ -1,0 +1,65 @@
+{
+  "name": "forge-vue-app",
+  "version": "1.0.0",
+  "description": "forge-vue-app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No test specified\"",
+    "dev": "vite",
+    "preview": "vite preview",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/verybeautyTang/forge-vue-app.git"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/verybeautyTang/forge-vue-app/issues"
+  },
+  "homepage": "https://github.com/verybeautyTang/forge-vue-app#readme",
+  "dependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
+    "@element-plus/icons-vue": "^2.1.0",
+    "@types/js-cookie": "^3.0.3",
+    "@types/node": "^18.15.5",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "@vueuse/core": "^9.13.0",
+    "axios": "^1.3.4",
+    "core-js": "^3.29.1",
+    "default-passive-events": "^2.0.0",
+    "element-plus": "^2.3.1",
+    "nprogress": "^0.2.0",
+    "path-to-regexp": "^6.2.1",
+    "pinia": "^2.0.33",
+    "pinia-plugin-persist": "^1.0.0",
+    "ts-node": "^10.9.1",
+    "vite-plugin-environment": "^1.1.3",
+    "vite-plugin-html-template": "^1.1.5",
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6",
+    "webpack": "^5.76.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.6",
+    "pretty-quick": "^3.1.3",
+    "sass": "^1.59.3",
+    "sass-loader": "^13.2.1",
+    "tailwindcss": "^3.2.7",
+    "typescript": "^5.0.2",
+    "unplugin-auto-import": "^0.15.1",
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "^4.2.1",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vue-tsc": "^1.2.0"
+  }
+}
