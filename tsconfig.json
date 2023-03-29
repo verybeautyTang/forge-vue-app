@@ -1,0 +1,47 @@
+{
+  "ts-node": {
+    "transpileOnly": true
+  },
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "allowJs": true,
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "noEmitOnError": true,
+    "noEmit": true,
+    "noImplicitAny": false,
+    "paths": {
+      "@/*": ["src/*"],
+      "store/*": ["src/store/*"]
+    },
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "types": ["vite/client", "element-plus/global"],
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./types"
+    ] /* 指定多个文件夹，这些文件夹的作用类似于 './node_modules/@types'. */
+  },
+
+  "include": [
+    "src/**/*.ts",
+    "src/**/**/*.ts",
+    "src/**/*.vue",
+    "src/**/**/*.vue",
+    "types/**/*.d.ts",
+    "src/types/**/*.d.ts",
+    "types/auto-imports.d.tss.d.ts",
+    "FE/postcss.config.js"
+  ],
+  "exclude": ["node_modules", "public/lib"]
+}
